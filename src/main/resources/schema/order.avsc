@@ -1,0 +1,39 @@
+{
+  "namespace": "com.example.model",
+  "type": "record",
+  "name": "OrderEvents",
+  "fields": [
+    {
+      "name": "customerName",
+       "type": "string"
+    },
+    {
+      "name": "driverId",
+      "type": "long"
+    },
+    {
+      "name": "orderList",
+      "type": {
+        "type": "array",
+        "items": {
+          "name": "OrderDish",
+          "type": "record",
+          "fields": [
+            {
+              "name": "id",
+              "type": "long"
+            },
+            {
+              "name": "dishId",
+              "type": "long"
+            },
+            {
+              "name": "dishPrice",
+              "type": "double"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
